@@ -1,6 +1,7 @@
 export interface RepoOwner {
   username: string
   avatar: string
+  url: string
 }
 
 export interface Repo {
@@ -9,6 +10,6 @@ export interface Repo {
   description: string
   url: string
   stars: number
-  issues: number
+  openIssues: number
   owner: RepoOwner
 }

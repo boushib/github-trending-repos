@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import api from "../api"
+import RepoList from "../components/RepoList"
 import { Repo } from "../models"
 import { mapAPIResponseToRepo } from "../utils"
 
@@ -19,12 +20,11 @@ const Home = () => {
     setTotalCount(data.total_count)
   }
 
-  console.log(repos, totalCount)
-
   return (
     <div className="home page">
       <div className="container">
-        <h1>Trending Repos</h1>
+        <h1 style={{ marginBottom: 24 }}>Trending Repos</h1>
+        <RepoList repos={repos} />
       </div>
     </div>
   )
