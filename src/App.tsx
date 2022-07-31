@@ -1,6 +1,8 @@
 const App = () => (
-  <div className="app">
-    <h1>App</h1>
+  <div className="app page">
+    <div className="container">
+      <h1>Trending Repos</h1>
+    </div>
   </div>
 )
 
