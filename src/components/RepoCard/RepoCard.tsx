@@ -17,7 +17,12 @@ const RepoCard = React.forwardRef(({ repo }: Props, ref: any) => (
     className="repo-card"
     ref={ref}
   >
-    <img className="repo-card__owner__avatar" src={repo.owner.avatar} alt="" />
+    <img
+      className="repo-card__owner__avatar"
+      src={repo.owner.avatar}
+      loading="lazy"
+      alt=""
+    />
     <div className="repo-card__details">
       <div className="repo-card__name">{repo.name}</div>
       <div className="repo-card__description">{repo.description ?? "--"}</div>
