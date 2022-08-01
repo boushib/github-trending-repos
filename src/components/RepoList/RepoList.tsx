@@ -5,7 +5,7 @@ import { mapAPIResponseToRepo } from "../../utils"
 import RepoCard from "../RepoCard"
 import "./RepoList.sass"
 
-const ITEMS_PER_PAGE = 20
+const ITEMS_PER_PAGE = 100
 
 const RepoList = () => {
   const [repos, setRepos] = useState<Repo[]>([])
