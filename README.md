@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+# Github Trending Repos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web app lists the most starred repositories on Github, built using React.js, TypeScript and SASS for styling 🚀.
 
-## Available Scripts
+To visit the actual repository, simply click the repository card and it will automatically open the repository link in a new browser tab.
 
-In the project directory, you can run:
+## API Rate Limit
 
-### `yarn start`
+Github API has a rate limit of 10 requests/min (For non authenticated users), so you might experience some problems if you keep scrolling so quickly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dependencies
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js
+- TypeScript
 
-### `yarn test`
+## Dev Environment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+First create a `.env` file in the project root directory and add this environment variable to it.
 
-### `yarn build`
+```text
+REACT_APP_API_URL=https://api.github.com/search
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run the app in development mode. This will by default start the app at `localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```text
+yarn dev
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production
 
-### `yarn eject`
+```text
+yarn build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will build the app for production to the `build` folder.
