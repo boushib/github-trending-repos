@@ -1,6 +1,7 @@
 import OpenIssueIcon from "../../icons/OpenIssue"
 import StarIcon from "../../icons/Star"
 import { Repo } from "../../models"
+import { formatToK } from "../../utils"
 import "./RepoCard.sass"
 
 interface Props {
@@ -16,11 +17,11 @@ const RepoCard = ({ repo }: Props) => (
       <div className="repo-card__meta">
         <div className="repo-card__stars">
           <StarIcon />
-          {repo.stars} Stars
+          {formatToK(repo.stars)} Stars
         </div>
         <div className="repo-card__stars">
           <OpenIssueIcon />
-          {repo.openIssues} Issues
+          {formatToK(repo.openIssues)} Issues
         </div>
         <div className="repo-card__owner__username">
           Owner: {repo.owner.username}

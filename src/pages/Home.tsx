@@ -14,7 +14,7 @@ const Home = () => {
 
   const fetchRepos = async () => {
     const { data } = await api.get(
-      `/repositories?q=created:>2017-10-22&sort=stars&order=desc&page=1`
+      `/repositories?q=created:>2000-01-01&sort=stars&order=desc&page=1`
     )
     setRepos(mapAPIResponseToRepo(data.items))
     setTotalCount(data.total_count)
