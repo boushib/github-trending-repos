@@ -17,5 +17,6 @@ export const mapAPIResponseToRepo = (data: any): Repo[] => {
 }
 
 export const formatToK = (n: number) => {
-  return n < 1000 ? n : `${Math.round(n / 1000).toFixed(1)}k`
+  console.log(n)
+  return n < 1000 ? n : `${(n / 1000).toFixed(1)}k`
 }
