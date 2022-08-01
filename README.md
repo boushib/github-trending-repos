@@ -4,6 +4,10 @@ This web app lists the most starred repositories on Github, built using React.js
 
 To visit the actual repository, simply click the repository card and it will automatically open the repository link in a new browser tab.
 
+## Live Demo
+
+To see how the app looks like, please check this live demo: <https://trending-repos.onrender.com/>
+
 ## API Rate Limit
 
 Github API has a rate limit of 10 requests/min (For non authenticated users), so you might experience some problems if you keep scrolling so quickly.
