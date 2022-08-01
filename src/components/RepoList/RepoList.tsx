@@ -5,7 +5,7 @@ import { mapAPIResponseToRepo } from "../../utils"
 import RepoCard from "../RepoCard"
 import "./RepoList.sass"
 
-const ITEMS_PER_PAGE = 30
+const ITEMS_PER_PAGE = 20
 
 const RepoList = () => {
   const [repos, setRepos] = useState<Repo[]>([])
@@ -45,7 +45,7 @@ const RepoList = () => {
 
     try {
       const { data } = await api.get(
-        `/repositories?q=created:>2000-01-01&sort=stars&order=desc&page=${currentPage}`
+        `/repositories?q=created:>2000-01-01&sort=stars&order=desc&page=${currentPage}&per_page=${ITEMS_PER_PAGE}`
       )
       setRepos([...repos, ...mapAPIResponseToRepo(data.items)])
       setPagesTotal(Math.ceil(data.total_count / ITEMS_PER_PAGE))
