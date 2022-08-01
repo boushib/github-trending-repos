@@ -1,3 +1,4 @@
+import React from "react"
 import OpenIssueIcon from "../../icons/OpenIssue"
 import StarIcon from "../../icons/Star"
 import { Repo } from "../../models"
@@ -8,8 +9,14 @@ interface Props {
   repo: Repo
 }
 
-const RepoCard = ({ repo }: Props) => (
-  <a href={repo.url} target="_blank" rel="noreferrer" className="repo-card">
+const RepoCard = React.forwardRef(({ repo }: Props, ref: any) => (
+  <a
+    href={repo.url}
+    target="_blank"
+    rel="noreferrer"
+    className="repo-card"
+    ref={ref}
+  >
     <img className="repo-card__owner__avatar" src={repo.owner.avatar} alt="" />
     <div className="repo-card__details">
       <div className="repo-card__name">{repo.name}</div>
@@ -29,6 +36,6 @@ const RepoCard = ({ repo }: Props) => (
       </div>
     </div>
   </a>
-)
+))
 
 export default RepoCard
