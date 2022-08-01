@@ -1,4 +1,5 @@
 .repo-card
+  display: block
   background-color: var(--color-accent)
   padding: 24px
   border-radius: 12px
@@ -11,14 +12,15 @@
   &__details
     flex-grow: 1
     overflow: hidden
+    display: flex
+    flex-direction: column
+    gap: 4px
 
   &__name
     font-size: 20px
     font-weight: 500
-    margin-bottom: 4px
 
   &__description
-    margin-bottom: 4px
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
@@ -47,3 +49,25 @@
       width: 20px
       height: 20px
       color: var(--color-primary)
+
+  @media (max-width: 740px)
+    &__owner__avatar
+      width: 160px
+      height: 160px
+
+    &__details
+      gap: 12px
+
+    &__meta
+      flex-direction: column
+      gap: 6px
+      align-items: flex-start
+
+  @media (max-width: 520px)
+    display: block
+
+    &__owner__avatar
+      margin-bottom: 12px
+
+    &__description
+      white-space: unset
